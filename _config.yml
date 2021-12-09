@@ -2,7 +2,7 @@
 name: Verb comparison
 description: Comparison of important present-tense verbs across three Indo-European languages
 baseurl: "" 
-url: "verb-comparison.netlify.app" 
+url: "https://verb-comparison.netlify.app" 
 
 # Build settings
 plugins:
