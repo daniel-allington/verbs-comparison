@@ -1,0 +1,4 @@
+---
+layout: lemma
+lemma: have
+---

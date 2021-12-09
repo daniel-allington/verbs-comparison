@@ -1,0 +1,34 @@
+---
+layout: default
+---
+
+{% assign lemma = site.data.verbs | where: "lemma", page.lemma %}
+{% assign persons = "first,second,third" | split: "," %}
+{% assign languages = "english,italian,polish" | split: "," %}
+
+<table>
+    <th>
+        {% for language in languages %}
+            <td>
+                {{ language | capitalize }}
+            </td>
+        {% endfor %}
+    </th>
+    {% for person in persons %}
+        <tr>
+            <td>
+                {{ person | capitalize }}
+            </td>
+            {% for language in languages %}
+                <td>
+                    {% assign form = lemma | 
+                        where: "language", language |
+                        find: "person", person %}
+                    {{ form.form }}
+                </td>
+            {% endfor %}
+        </tr>
+    {% endfor %}
+</table>
+
+<p><a href = "{{ site.url }}">Return to index</a></p>

@@ -1,6 +1,9 @@
 ---
-# Feel free to add content and custom Front Matter to this file.
-# To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
-
-layout: home
+layout: default
 ---
+
+<ul>
+{% for lemma in site.lemmas %}
+    <li><a href = "{{ lemma.url }}">{{ lemma.lemma }}</a></li>
+{% endfor %}
+</ul>
