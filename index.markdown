@@ -2,7 +2,7 @@
 layout: default
 ---
 
-The verbs:
+<h1>The verbs:</h1>
 <ul>
 {% for lemma in site.lemmas %}
     <li><a href = "{{ lemma.url }}">{{ lemma.lemma }}</a></li>
